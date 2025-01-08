@@ -121,3 +121,7 @@ dependencies => npm i react-router-dom axios
 npm create vite@latest
 1] install tailwind css
 2] react router dom
+3] home => useEffect
+4] showbook => useEffect
+5] createBook => handlebook , onChange = {(e) => setBook(e.target.value)}
+6] updateBook => useEffect

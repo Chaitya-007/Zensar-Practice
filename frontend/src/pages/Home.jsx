@@ -27,6 +27,9 @@ const Home = () => {
     <div>
       Books List
       <div>
+        <Link to="/books/create">Create</Link>
+      </div>
+      <div>
         <table>
           <thead>
             <tr>
