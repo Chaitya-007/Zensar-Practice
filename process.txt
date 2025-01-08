@@ -12,7 +12,7 @@ HTTP Requests =>
 3] Create .gitignore
 4] Create README.md
 5] Create Backend folder
-6] Create Frontend folder
+6] Create Frontend folder(Later on, delte this Fontend folder and using npm create vite@latest => create frontend)
 7] cd/backend
 8] npm init -y => package.json
 9] type : module
@@ -109,3 +109,12 @@ app.use(
     allowedHeaders : ['Content-type']
   })
 )
+
+
+
+********** Done With Backend **********
+
+
+***************** Fontend **************
+come in root directory =>
+npm create vite@latest
