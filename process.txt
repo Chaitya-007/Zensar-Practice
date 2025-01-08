@@ -4,6 +4,7 @@ HTTP Requests =>
 3] 500 => Internal Server Error
 4] 201 => Created
 5] 200 => OK, request successfull
+6] 400 => Bad Request, server is unable to process the request due to client error
 
 
 1] Install Nodejs
@@ -22,6 +23,7 @@ HTTP Requests =>
 
 Url for backend will be 
 localhost:5555
+url will => http://localhost:5555/
 
 Lesson 1
 // Create 
@@ -56,3 +58,19 @@ Save a new book with mongoose
 app.post(router, async (callback))
 const newBook = await BookSchema.create(bookObj);
 return response.status(201).send(book);
+
+// Lesson 6
+Get all books with the help of mongoose
+app.get(router, async (callback))
+const books = await BookSchema.find({});
+return response.send(200).json(books)
+
+// Lesson 7 
+Get one book with the help of mongoose 
+:id captures entire text at which it is defined,
+the value is accessible in req.params.id 
+app.get(/books/:id)
+const book = await BookSchema.findById(id);
+
+// Lesson 8
+Update a Book with mongoose 
