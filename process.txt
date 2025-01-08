@@ -1,6 +1,9 @@
 HTTP Requests => 
 1] 404 => Not Found
 2] 234 => status code is an FTP server return code that indicates the server has accepted the client's security mechanism
+3] 500 => Internal Server Error
+4] 201 => Created
+5] 200 => OK, request successfull
 
 
 1] Install Nodejs
@@ -40,3 +43,16 @@ mongoose
   app.listen(PORT,callback);
 })
 .catch((error) => {})
+
+// Lesson 4
+create Schema
+const nameOfSchema = mongoose.Schema({})
+export const Book = mongoose.model('ClusterName',nameOfSchema);
+
+// Lesson 5
+Save a new book with mongoose 
+
+// Post 
+app.post(router, async (callback))
+const newBook = await BookSchema.create(bookObj);
+return response.status(201).send(book);
