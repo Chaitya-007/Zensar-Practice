@@ -1,0 +1,6 @@
+1] Install Nodejs
+2] Install VSCode
+3] Create .gitignore
+4] Create README.md
+5] Create Backend folder
+6] Create Frontend folder
