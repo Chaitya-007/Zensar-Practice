@@ -19,7 +19,7 @@ HTTP Requests =>
 10] npm i express nodemon
 11] start : nodemon index.js
 12] dev : nodemon index.js
-13] npm i express nodemon dotenv mongoose
+13] npm i express nodemon dotenv mongoose cors
 
 Url for backend will be 
 localhost:5555
@@ -27,6 +27,8 @@ url will => http://localhost:5555/
 
 Lesson 1
 // Create 
+const app = express();
+app.use(express.json()) => just below the cont app = express()
 app.listen(PORT,callback);
 
 Lesson 2
@@ -74,3 +76,28 @@ const book = await BookSchema.findById(id);
 
 // Lesson 8
 Update a Book with mongoose 
+app.put(/book/:id, async (callback))
+const result = await mongoose.findByIdAndUpdate(id)
+
+// Lesson 9
+Delete a Book with mongoose
+app.delete(/book/:id, async (callback))
+const result = await mongoose.findByIdAndDelete(id)
+
+// Lesson 10
+Create routes folder 
+const router = express.Router();
+paste all routes here
+replace app with router in all routes
+export default router;
+
+in index.js file
+import router
+app.use('/api', router);
+this 'api' will be prefixed in all urls
+
+**********************************************
+app.use('/api', router); => should be placed just above the mongoose.connect
+
+// Lesson 11
+//CORS Policy
